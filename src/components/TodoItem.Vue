@@ -1,10 +1,9 @@
 <template>
-
 	<div class="item_wrap"  v-bind:class="{ finished: todo.finished}"> 
 		<input type="checkbox" v-model='todo.finished'>
 		<input class="item_text" type="text" v-model='todo.text'>
 		<p class="time">{{todo.addTime}}</p>
-		<span @click='deleteItem(index)'>删除</span>
+		<span @click='deleteItem(index)' class="delete_btn">删除</span>
 	</div>
 </template>
 <script type="text/javascript">
@@ -36,8 +35,12 @@
 		border:none;
 		background: transparent;
 		text-overflow: ellipsis;
+		cursor: pointer;
 	}
 	.item_time{
 		width: 200px;
+	}
+	.delete_btn{
+		cursor: pointer;
 	}
 </style>

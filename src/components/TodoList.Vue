@@ -71,7 +71,7 @@
 		methods:{
 			submit:function(){
 				if (this.inputText!='') {
-					this.todos.push({id:this.id,text:this.inputText,addTime:new Date().toLocaleString(),finished:false});
+					this.todos.unshift({id:this.id,text:this.inputText,addTime:new Date().toLocaleString(),finished:false});
 					this.inputText='';
 					this.id++;
 				}
